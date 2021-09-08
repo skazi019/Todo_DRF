@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #ffa6a6 0%, #a4b2ff 100%);
+  font-family: 'Roboto', sans-serif;
+}
+
+body main {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .container {
+  width: 450px;
+  background-color: white;
+  padding: 2rem 2rem;
+  border-radius: 25px;
+  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body main .container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .container .header h1 {
+  color: #404040;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+body main .container .add-task {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2rem;
+      grid-template-columns: 1fr 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+body main .container .add-task .add-task-input {
+  height: 2rem;
+  border: 1px solid rgba(78, 78, 78, 0.2);
+  border-radius: 5px;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+body main .container .add-task .add-task-button {
+  height: 2rem;
+  width: 2rem;
+  background-color: #a4b2ff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  cursor: pointer;
+}
+
+body main .container .add-task .add-task-button::before {
+  content: ' ';
+  position: absolute;
+  display: block;
+  background-color: white;
+  height: 60%;
+  width: 5%;
+  left: 48%;
+  top: 20%;
+}
+
+body main .container .add-task .add-task-button::after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  background-color: white;
+  height: 60%;
+  width: 5%;
+  left: 48%;
+  top: 20%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body main .container .todays-tasks {
+  margin-top: 1.5rem;
+  font-size: .7rem;
+  color: #787878;
+  font-weight: 500;
+}
+
+body main .container .tasks {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+body main .container .tasks .all-tasks {
+  padding: 0 .5rem;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+body main .container .tasks .all-tasks .task {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1em 1fr 1em;
+      grid-template-columns: 1em 1fr 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 1em 1em;
+}
+
+body main .container .tasks .all-tasks .task .task-status {
+  height: 1em;
+  width: 1em;
+  border: 2px solid #BBD2FF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body main .container .tasks .all-tasks .task .edit {
+  background-image: url("./icons/pen-solid.svg");
+  fill: #CFCFCF;
+  height: .8em;
+  width: .8em;
+  cursor: pointer;
+}
+
+body main .container .tasks .all-tasks .task .trash {
+  background-image: url("./icons/trash-solid.svg");
+  fill: #CFCFCF;
+  height: .8em;
+  width: .8em;
+  cursor: pointer;
+}
+
+body main .container .tasks .all-tasks .completed .task-status {
+  content: '';
+  height: 1rem;
+  width: 1rem;
+  background-color: #8591FF;
+  border: 2px solid #8591FF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body main .container .tasks .all-tasks .completed .task-detail {
+  color: #CFCFCF;
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=style.css.map */
